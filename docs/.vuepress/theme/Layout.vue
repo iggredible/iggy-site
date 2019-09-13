@@ -17,6 +17,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import Blogs from './Blogs';
 import Blog from './Blog';

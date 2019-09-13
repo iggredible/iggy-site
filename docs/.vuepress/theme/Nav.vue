@@ -2,14 +2,13 @@
   <header class="px-6 bg-white flex flex-wrap items-center py-8">
      <input class="hidden" type="checkbox" id="menu-toggle" />
      <label id="hamburger" for="menu-toggle" class="fixed cursor-pointer block z-20"> 
-     <!-- </label> -->
        <div id="burgerToggle" class="cursor-pointer">
          <span></span>
          <span></span>
          <span></span>
        </div>
     </label>
-     <!-- menu -->
+
     <div class="bg-gray-800 z-10 fixed top-0 left-0 bottom-0 w-64" id="sideMenu">
       <ul class="my-16 mx-4">
         <li class="my-4 cursor-default hover:no-underline"><About /></li>
@@ -37,12 +36,12 @@ export default {
 <style>
   /* slides the menu */
   #sideMenu {
-    transform: translate(-100%, 0%);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    left: -100%;
+    transition:  0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
   #menu-toggle:checked ~ #sideMenu {
-    transform: translate(0%, 0%);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    left: 0%;
   }
   #menu-toggle:checked ~ #hamburger span {
 		background: #FFF;
